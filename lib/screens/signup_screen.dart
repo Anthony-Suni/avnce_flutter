@@ -148,7 +148,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         child: IconButton(
                           icon: const Icon(
                             FontAwesomeIcons.google,
-                            // color: Colors.blue,
+                            color: Colors.black,
                           ),
                           onPressed: () {},
                         ),
@@ -163,7 +163,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         child: IconButton(
                           icon: const Icon(
                             FontAwesomeIcons.apple,
-                            // color: Colors.blue,
+                            color: Colors.black,
                           ),
                           onPressed: () {},
                         ),

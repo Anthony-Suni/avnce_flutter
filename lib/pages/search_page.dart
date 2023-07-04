@@ -23,7 +23,7 @@ class _SearchState extends State<Search> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    print('SEARCH PAGE IS CALLED');
+    print('EXPLORA ARTE');
   }
 
   @override

@@ -13,16 +13,21 @@ class WelcomeScreen extends StatelessWidget {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
-        decoration: const BoxDecoration(
-            image:
-                DecorationImage(image: AssetImage("assets/background1.jpg"))),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("fondo_welcome.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            const SizedBox(
-              height: 130,
-              width: 180,
-              child: Image(image: AssetImage("logo.jpg"), fit: BoxFit.cover),
+            ClipOval(
+              child: SizedBox(
+                height: 200,
+                width: 200,
+                child: Image(image: AssetImage("logo.jpg"), fit: BoxFit.cover),
+              ),
             ),
             const SizedBox(height: 40),
             CustomizedButton(
@@ -30,8 +35,10 @@ class WelcomeScreen extends StatelessWidget {
               buttonColor: Colors.black,
               textColor: Colors.white,
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const LoginScreen()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const LoginScreen()),
+                );
               },
             ),
             CustomizedButton(
@@ -39,16 +46,21 @@ class WelcomeScreen extends StatelessWidget {
               buttonColor: Colors.white,
               textColor: Colors.black,
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const SignUpScreen()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const SignUpScreen()),
+                );
               },
             ),
             const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.all(10.0),
               child: Text(
-                "Continue as a Guest",
-                style: TextStyle(color: Color(0xff35C2C1), fontSize: 25),
+                "EXPLORA Y ARTE",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold),
               ),
             )
           ],
